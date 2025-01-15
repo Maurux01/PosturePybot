@@ -103,10 +103,4 @@ If you’d like to enhance this project:
 *Stay upright, stay healthy, and keep coding!*
 ```
 
-### What's Improved?
-1. **Structure**: Organized into sections with clear headers.
-2. **Visual Appeal**: Added icons for better readability.
-3. **Call to Action**: Encourages contributions and links to your GitHub.
-4. **Details**: Expanded usage instructions and included benefits of maintaining good posture.
 
-Let me know if you'd like to tweak this further or add more sections! 😊
