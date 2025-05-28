@@ -1,5 +1,3 @@
-
-
 # 📏 Posture Detection Bot
 
 A Python-based real-time posture detection tool that uses **MediaPipe** and **OpenCV** to analyze body alignment through your webcam. It provides instant visual feedback on whether you are sitting or standing upright to help you maintain good posture and avoid discomfort or long-term health issues.
