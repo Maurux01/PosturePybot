@@ -2,8 +2,6 @@
 
 A Python-based real-time posture detection tool that uses **MediaPipe** and **OpenCV** to analyze body alignment through your webcam. It provides instant visual feedback on whether you are sitting or standing upright to help you maintain good posture and avoid discomfort or long-term health issues.
 
----
-
 ## 🚀 Features
 - **Real-time posture analysis**: Detects your posture instantly using webcam feed.
 - **Visual feedback**: Displays posture status directly on the video:
