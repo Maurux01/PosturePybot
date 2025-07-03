@@ -1,102 +1,85 @@
-# 📏 Posture Detection Bot
+# 🦾 Real-Time Posture Detection Bot
 
-A Python-based real-time posture detection tool that uses **MediaPipe** and **OpenCV** to analyze body alignment through your webcam. It provides instant visual feedback on whether you are sitting or standing upright to help you maintain good posture and avoid discomfort or long-term health issues.
-
-## 🚀 Features
-- **Real-time posture analysis**: Detects your posture instantly using webcam feed.
-- **Visual feedback**: Displays posture status directly on the video:
-  - 🟢 **Green**: You are upright.
-  - 🔴 **Red**: You are slouching.
-- Lightweight and easy to set up.
+A Python bot that monitors your posture in real time using your webcam, powered by **MediaPipe** and **OpenCV**. It provides instant visual and sound feedback to help you maintain a healthy, upright posture while sitting or standing.
 
 ---
 
-## 📋 How It Works
-1. **Pose Estimation**: The tool leverages the **MediaPipe Pose** model to track key body landmarks such as shoulders and hips.
-2. **Posture Evaluation**: It calculates the vertical alignment of the shoulders and hips to determine if the user is upright.
-3. **Feedback**: Based on the analysis:
-   - If the shoulders and hips are vertically aligned (within a certain threshold), it marks the posture as **upright**.
-   - Otherwise, it marks the posture as **slouching**.
+## 🚀 Features
+- **Real-time posture analysis** using your webcam
+- **Visual feedback**: On-screen status ("You are upright" or "You are slouching!") with color coding
+- **Sound alert** when bad posture is detected
+- **Live statistics**: Tracks time spent in good and bad posture
+- **Configurable sensitivity threshold** (adjustable during runtime)
+- **Cross-platform support** (Windows, Linux, Mac)
 
 ---
 
 ## 🛠️ Installation
 
-1. **Clone the Repository**:
+1. **Clone the Repository**
    ```bash
-   git clone https://github.com/maurux01/posture-detection-bot.git
-   cd posture-detection-bot
+   git clone https://github.com/Maurux01/PosturePybot
+   cd PosturePybot
    ```
 
-2. **Install Dependencies**:
-   Ensure you have Python installed, then install the required libraries:
+2. **Install Dependencies**
+   Ensure you have Python 3.7+ installed, then run:
    ```bash
-   pip install mediapipe opencv-python
-   ```
-
-3. **Run the Script**:
-   ```bash
-   python posture_detection_bot.py
+   pip install -r requirements.txt
    ```
 
 ---
 
-## 🖥️ Usage Instructions
+## 🖥️ Usage
 
-- **Webcam Activation**: Once the script is running, your webcam will activate automatically.
-- **Posture Feedback**:
-  - Sit or stand in front of the camera.
-  - The bot will analyze your posture and display feedback in real-time.
-- **Exit**: Press `q` to close the application.
+Run the bot with the default threshold:
+```bash
+python pybot.py
+```
+
+Or specify a custom threshold (default is 0.05):
+```bash
+python pybot.py --threshold 0.07
+```
+
+### Controls
+- **q**: Quit the application
+- **+**: Increase sensitivity threshold (stricter)
+- **-**: Decrease sensitivity threshold (more lenient)
+
+---
+
+## 📋 How It Works
+1. **Pose Estimation**: Uses MediaPipe Pose to detect key body landmarks (shoulders, hips).
+2. **Posture Evaluation**: Calculates the vertical difference between the average y-coordinates of the shoulders and hips.
+3. **Feedback**:
+   - If the difference is less than the threshold, you are considered upright (green message).
+   - If the difference exceeds the threshold, you are slouching (red message + sound alert).
+4. **Statistics**: Tracks and displays the time spent in good and bad posture during the session.
 
 ---
 
 ## ⚙️ Configuration
-
-You can adjust the detection sensitivity by modifying the **posture threshold** in the script. The default threshold is `0.05`, which you can increase or decrease for stricter or more lenient posture evaluation.
-
----
-
-## 📷 Screenshots
-*(Include screenshots here if available to showcase the tool in action.)*
+- **Threshold**: The sensitivity for posture detection. Lower values are stricter. You can set it at launch with `--threshold` or adjust it live with `+` and `-` keys.
 
 ---
 
-## 🤔 Why Use This?
-
-Good posture is essential for:
-- Reducing back and neck pain.
-- Improving focus and energy levels.
-- Preventing long-term health complications like spinal misalignment.
-
-This tool serves as a quick and practical way to monitor your posture and develop healthier habits.
+## ❗ Troubleshooting
+- If you see an error about the webcam, ensure no other application is using it and that your device has a camera.
+- For sound alerts on Linux/Mac, the system bell is used. On Windows, a beep is played.
+- If you have issues with dependencies, ensure you are using a compatible Python version and that `opencv-python` and `mediapipe` are installed.
 
 ---
 
-## 👤 About the Creator
-
-This project was developed by **maurux01**, an industrial engineer and programmer passionate about merging technology and wellness.  
-
-Visit my GitHub: [maurux01](https://github.com/maurux01)
+## 👤 Author
+Developed by [maurux01](https://github.com/maurux01). Contributions and suggestions are welcome!
 
 ---
 
 ## 📜 License
-
-This project is licensed under the **MIT License**. Feel free to use, modify, and share it. Contributions are welcome!
-
----
-
-## 🤝 Contributions
-
-If you’d like to enhance this project:
-1. Fork the repository.
-2. Make your changes.
-3. Submit a pull request with a brief description of the updates.
+MIT License. Feel free to use, modify, and share.
 
 ---
 
-*Stay upright, stay healthy, and keep coding!*
+*Sit up straight, stay healthy, and keep coding!*
 ```
-
-
