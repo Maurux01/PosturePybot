@@ -64,6 +64,16 @@ python pybot.py --threshold 0.07
 
 ---
 
+## 🚦 Performance Tips
+If you are running the bot on a low-resource system, consider the following tips to improve performance:
+- **Close other applications** that may be using the webcam or consuming CPU/RAM.
+- **Lower webcam resolution**: Edit the script to set a lower resolution for the video capture (e.g., 640x480).
+- **Use 64-bit Python** for better memory management.
+- **Run in a well-lit environment** to help MediaPipe detect landmarks more efficiently.
+- **Keep your Python and dependencies updated** for the latest performance improvements.
+
+---
+
 ## ❗ Troubleshooting
 - If you see an error about the webcam, ensure no other application is using it and that your device has a camera.
 - For sound alerts on Linux/Mac, the system bell is used. On Windows, a beep is played.
