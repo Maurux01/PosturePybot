@@ -22,11 +22,24 @@ A Python bot that monitors your posture in real time using your webcam, powered 
    cd PosturePybot
    ```
 
-2. **Install Dependencies**
-   Ensure you have Python 3.7+ installed, then run:
-   ```bash
-   pip install -r requirements.txt
+2. **Install Dependencies and Run (Windows)**
+   You can use the provided batch script for easy setup:
+   ```bat
+   install_and_run.bat
    ```
+
+3. **Install Dependencies and Run (Linux)**
+   Use the provided shell script for easy setup:
+   ```bash
+   chmod +x install_and_run.sh
+   ./install_and_run.sh
+   ```
+
+If you prefer manual installation, ensure you have Python 3.7+ and run:
+```bash
+pip install -r requirements.txt
+python pybot.py
+```
 
 ---
 
