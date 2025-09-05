@@ -2,6 +2,7 @@
 
 A Python bot that monitors your posture in real time using your webcam, powered by **MediaPipe** and **OpenCV**. It provides instant visual and sound feedback to help you maintain a healthy, upright posture while sitting or standing.
 
+
 ---
 
 ## 🚀 Features
